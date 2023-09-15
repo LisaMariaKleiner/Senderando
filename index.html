@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" href="./img/icons8-kawaii-pizza-16.png">
+    <title>Senderando</title>
+</head>
+
+<body onload="renderMenus()">
+    <div id="senderando">
+
+        <header>
+            <img class="header_img" src="./img/pizza-header.jpg" alt="">
+            <img class="logo_img" src="./img/logo_pizza.png" alt="">
+        </header>
+
+        <section class="company">
+            <div class="company_info">
+                <p class="company_name"><b>PerfectPizza GmbH</b></p>
+                <img class="company_img" src="./img/bewertung.png" alt="">
+                <p class="company_description">Dieses Restaurant nimmt nicht am Stempelkarten-Programm teil.</p>
+            </div>
+            <div class="company_buttons">
+                <button id="toggleButton" onclick="togglePopup()">
+                    <img id="toggleImage" src="./img/info_button.svg" alt="Toggle">
+                </button>
+                <div id="popup" class="hidden">
+                    <!-- Hier können Sie den Inhalt des Popup-Fensters platzieren -->
+                    <p>Unsere Pizzeria hat im Jahr 2022 den goldenen Pizza-Award verliehen bekommen!
+                        Kommen auch Sie in den Genuß DIESE Pizza zu erleben!
+                    </p>
+                    <button id="closeButton" onclick="closePopup()">Schließen</button>
+                </div>
+                <!--<img class="company_button" src="./img/info_button.svg" alt="Info Button">-->
+                <img class="company_button" src="./img/favouriteButton.svg" alt="Favourite Button">
+                <img onclick="renderBasket()" class="company_button" src="./img/einkaufswagen.svg" alt="Zum Warenkorb">
+            </div>
+        </section>
+
+        <section class="search_menu">
+            <form onsubmit="searchProduct(); return false;">
+                <Input type="text" id="search" onkeyup="filterProducts()" required pattern="[A-Za-z]" placeholder="Search Product"></Input>
+                <!--<img class="lupe" src="./img/lupe.svg" alt="Bild einer Lupe">-->
+            </form>
+        </section>
+
+        <div id="menu_container" class="menus">
+            <div id="gerichte"></div>
+            <div id="warenkorb"></div>
+        </div>
+        <div id="button" class="basket_and_sum">
+            <div id="final_sum"></div>
+            <div class="basket_buttons">
+                <button id="returnButton" onclick="backToStart()">Zurück zur Übersicht</button>
+                <button id="order_button" class="no_order" onclick="sendOrder()">Bestellen!</button>
+            </div>
+        </div>
+        
+
+        <footer>
+            <div class="impressum">
+                <p class="company_name"><b>PerfectPizza GmbH</b></p>
+                <p class="company_adress">
+                    Drosselweg 88 <br>
+                    53343 Wachtberg <br>
+                    Tel.: 0123 / 456789 <br>
+                    Email: bestellung@perfectpizza.de
+                </p>
+            </div>
+            <!--<div class="more_information">
+                <p>
+                    St.-Nr.: folgt <br>
+                    Plattform der EU-Kommission zur Online-Streitbeilegung: <br><br>
+                    Wir sind ein professioneller Anbieter.<br>
+                    Erfahre mehr darüber, wie wir gemeinsam mit Senderando.de die<br>
+                    Verbraucherverantwortung übernehmen.
+                </p>
+            </div>-->
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

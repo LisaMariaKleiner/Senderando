@@ -1,0 +1,416 @@
+/* =============================== Allgemeine Angaben =========================== */
+body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51, 51, 51);
+    margin: 0;
+}
+
+#senderando {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* ======================= Angaben zum Header ===================================== */
+header {
+    position: relative;
+    height: 500px;
+    background-color: white;
+}
+/* Hintergrundbild Header */
+.header_img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+/* Logo Rund im Header */
+.logo_img {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    border-radius: 100px;
+}
+/* Firmendaten */
+.company {
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company_button {
+    width: 30px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.company_button:hover {
+    background-color: #525252;
+}
+
+.phonenumber {
+    text-decoration: none;
+}
+
+.company_name {
+    font-size: 23px;
+}
+
+/* Suchfeld */
+.search_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #525252;
+    margin-bottom: 20px;
+}
+
+.lupe {
+    width: 50px;
+    height: 50px;
+}
+
+#search {
+    text-align: center;
+    height: 40px;
+    width: 250px;
+}
+
+/* ========================= Kompletter Container der Produkte ======================== */
+.menus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*====================== Container einzelner Produkte ===================== */
+.product_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 0.1px solid;
+    margin-bottom: 7px;
+}
+
+.product_info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    padding-bottom: 10px;
+}
+
+.basket {
+    width: 30px;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 10px;
+}
+.basket:hover {
+    background-color: #525252;
+}
+
+.return_add-to_basket {
+    position: absolute;
+    background-color: #767676;
+    color: white;
+    border: 1px solid;
+}
+
+
+/* =========================== Footer =========================== */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #525252;
+    height: 200px;
+}
+
+.impressum, .more_information {
+    height: 150px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+
+/* ============================== Warenkorb Seite ======================== */
+
+
+.d-none {
+    display: none!important;
+}
+
+.basket_contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+}
+
+#returnButton {
+    width: 200px;
+    height: 50px;
+    background-color: #525252;
+    margin: 20px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#warenkorb {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 7px;
+    padding-bottom: 20px;
+}
+
+.basket_and_sum {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.warenkorb_preis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100px;
+}
+
+.amounts_calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.produktbeschreibung {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.plus_minus {
+    width: 20px;
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.plus_minus:hover {
+    width: 20px;
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #767676;
+}
+
+.basket_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_order {
+    width: 200px;
+    height: 50px;
+    background-color: grey;
+    margin: 20px 20px;
+    color: white;
+}
+
+.order_button_start {
+    width: 200px;
+    height: 50px;
+    margin: 20px 20px;
+    background-color: red;
+    cursor: pointer;
+}
+
+
+/* ============================ Button PupUp ============================ */
+.hidden {
+    display: none;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#toggleImage {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    
+}
+
+#toggleButton {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: 60px;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+#toggleImage:hover {
+    background-color: #525252;
+}
+
+
+
+
+
+/* ======================== Add to Cart Button ======================== */
+.button-hover-addcart {
+    text-align: center;
+    border: 2px solid #767676;
+    background: transparent;
+    color: #767676;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 0.07rem;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .button-hover-addcart span {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button-hover-addcart .fa {
+    position: absolute;
+    font-size: 1.2rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #1779ba;
+    right: -20px;
+    transition: 0.4s right cubic-bezier(0.38, 0.6, 0.48, 1);
+  }
+  
+  .button-hover-addcart:hover {
+    border-color: #1779ba;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .button-hover-addcart:hover span {
+    margin-right: 20px;
+    color: #1779ba;
+  }
+  
+  .button-hover-addcart:hover .fa {
+    right: 12px;
+    background-image: url(./img/einkaufswagen.svg);
+    background-repeat: no-repeat;
+  }
+
+  .highlight-button {
+    background-color: aquamarine;
+}
+
+/* ======================= Media Queries ======================= */
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .company {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media (max-width: 530px) {
+    .company {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .menus {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .more_information {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .amounts_calculator {
+        gap: 5px;
+    }
+    .product_container {
+        flex-direction: column;
+    }
+    .basket_buttons {
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column;
+    }
+    .basket_contain {
+        flex-direction: column;
+        gap: 0;
+        width: 90%;
+    }
+    .produktbeschreibung {
+        width: 100%;
+        border-bottom: 1px solid;
+    }
+    #warenkorb {
+        width: 100%;
+    }
+    #popup {
+        position: absolute;
+        width: 50%;
+        top: 60%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+}
+  
